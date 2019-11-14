@@ -23,19 +23,19 @@ public class ServiceConfig {
         return orderService;
     }
 
-    @Bean
+    @Bean("productServiceBean")
     public ProductService productService(ProductRepository productRepository) {
         ProductService productService = new ProductServiceImpl(productRepository);
         return productService;
     }
 
-    @Bean
+    @Bean("proposalServiceBean")
     public ProposalService proposalService(ProposalRepository proposalRepository) {
         ProposalService proposalService = new ProposalServiceImpl(proposalRepository);
         return proposalService;
     }
 
-    @Bean
+    @Bean("sellerServiceBean")
     public SellerService sellerService() {
         SellerService sellerService = new SellerServiceImpl();
         return sellerService;

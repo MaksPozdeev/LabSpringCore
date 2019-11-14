@@ -7,7 +7,8 @@ import org.springframework.context.annotation.Import;
 @Import({RepositoryConfig.class,
         ServiceConfig.class,
         InitializerConfig.class,
-        FactoryConfig.class})
+        FactoryConfig.class,
+        AdditionalBeansConfig.class})
 public class SystemConfig {
     //...
 }
