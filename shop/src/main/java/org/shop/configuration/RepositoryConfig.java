@@ -24,8 +24,7 @@ public class RepositoryConfig {
 
     @Bean
     public OrderRepository orderMapRepository(
-            @Value("${intitialSequence}")
-                    long intitialSequence) {
+            @Value("${intitialSequence}") long intitialSequence) {
         OrderMapRepository orderMapRepository = new OrderMapRepository();
         orderMapRepository.setSequence(intitialSequence);
         return new OrderMapRepository();
