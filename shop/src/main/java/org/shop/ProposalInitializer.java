@@ -17,7 +17,6 @@ public class ProposalInitializer {
     
     /** The product service. */
     @Autowired
-    @Qualifier("productServiceBean")
     private ProductService productService;
 
     /** The proposal service. */
@@ -27,7 +26,6 @@ public class ProposalInitializer {
 
     /** The seller service. */
     @Autowired
-    @Qualifier("sellerServiceBean")
     private SellerService sellerService;
 
     /**

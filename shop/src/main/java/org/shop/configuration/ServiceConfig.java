@@ -23,7 +23,7 @@ public class ServiceConfig {
         return orderService;
     }
 
-    @Bean("productServiceBean")
+    @Bean
     public ProductService productService(ProductRepository productRepository) {
         ProductService productService = new ProductServiceImpl(productRepository);
         return productService;
@@ -35,7 +35,7 @@ public class ServiceConfig {
         return proposalService;
     }
 
-    @Bean("sellerServiceBean")
+    @Bean
     public SellerService sellerService() {
         SellerService sellerService = new SellerServiceImpl();
         return sellerService;

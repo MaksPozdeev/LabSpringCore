@@ -39,5 +39,4 @@ public class InitializerConfig {
         return userInitializer;
     }
 
-
 }
