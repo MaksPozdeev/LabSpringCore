@@ -1,6 +1,8 @@
 package org.shop.configuration;
 
+import org.shop.annotation.InjectRandomIntAnnotationBeanPostProcessor;
 import org.shop.common.Sellers;
+import org.shop.annotation.MyClass;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -17,5 +19,17 @@ public class AdditionalBeansConfig {
         mapSellerNames.put(2L, Sellers.SAMSUNG);
         return mapSellerNames;
     }
+
+    @Bean
+    public InjectRandomIntAnnotationBeanPostProcessor injectRandomIntAnnotationBeanPostProcessor(){
+        InjectRandomIntAnnotationBeanPostProcessor injectRandomIntAnnotationBeanPostProcessor = new InjectRandomIntAnnotationBeanPostProcessor();
+        return  injectRandomIntAnnotationBeanPostProcessor;
+    }
+
+    @Bean("quoterBean")
+    public MyClass quoter(){
+        return new MyClass();
+    }
+
 
 }
