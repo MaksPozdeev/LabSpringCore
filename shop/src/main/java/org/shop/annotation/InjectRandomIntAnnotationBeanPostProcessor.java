@@ -6,6 +6,7 @@ import org.springframework.util.ReflectionUtils;
 
 import java.lang.reflect.Field;
 
+
 public class InjectRandomIntAnnotationBeanPostProcessor implements BeanPostProcessor {
     @Override
     public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {

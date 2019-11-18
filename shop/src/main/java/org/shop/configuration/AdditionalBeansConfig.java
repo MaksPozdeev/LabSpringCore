@@ -3,6 +3,7 @@ package org.shop.configuration;
 import org.shop.annotation.InjectRandomIntAnnotationBeanPostProcessor;
 import org.shop.common.Sellers;
 import org.shop.annotation.MyClass;
+import org.shop.logging.LoggingAspect;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -29,6 +30,12 @@ public class AdditionalBeansConfig {
     @Bean("quoterBean")
     public MyClass quoter(){
         return new MyClass();
+    }
+
+    @Bean("logaspect")
+    public LoggingAspect loggingAspect(){
+        LoggingAspect loggingAspect = new LoggingAspect();
+        return  loggingAspect;
     }
 
 

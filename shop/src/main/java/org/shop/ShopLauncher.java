@@ -1,6 +1,8 @@
 package org.shop;
 
 
+import org.shop.api.OrderService;
+import org.shop.api.impl.OrderServiceImpl;
 import org.shop.configuration.SystemConfig;
 import org.shop.data.*;
 import org.shop.repository.*;
@@ -56,6 +58,9 @@ public class ShopLauncher {
         ItemRepository itemRepository  = ctx.getBean(ItemRepository.class);
         List<Item> itemList = itemRepository.getItemsByOrderId(1L);
         System.out.println(itemList);
+
+//        OrderService orderService = ctx.getBean(OrderServiceImpl.class);
+//        orderService.createOrder(userRepository.getUserById(1L), itemList.get(1));
 
     }
 }
