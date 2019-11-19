@@ -26,6 +26,7 @@ public class DataInitializer {
     /**
      * Inits the data.
      */
+
     public void initData() {
         sellerInitializer.initSellers();
         userInitializer.initUsers();

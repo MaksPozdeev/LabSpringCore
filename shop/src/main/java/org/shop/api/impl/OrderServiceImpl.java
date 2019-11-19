@@ -16,8 +16,10 @@ import org.springframework.stereotype.Service;
 
 public class OrderServiceImpl implements OrderService {
 
+    @Autowired
     private OrderRepository orderRepository;
 
+    @Autowired
     private ItemService itemService;
 
     @Override
